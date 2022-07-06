@@ -26,7 +26,7 @@ public class MessageSender {
   
   @Bean
   public NewTopic autoCreateTopicOnStartupIfNotExistant() {
-    return TopicBuilder.name(TOPIC_NAME).partitions(1).replicas(1).build();
+    return TopicBuilder.name(TOPIC_NAME).partitions(1).replicas(3).build();
   }
     
   public void send(Message<?> m) {

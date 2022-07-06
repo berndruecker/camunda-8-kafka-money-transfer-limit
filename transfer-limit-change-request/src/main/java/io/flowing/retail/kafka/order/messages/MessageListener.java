@@ -37,6 +37,7 @@ public class MessageListener {
 
     TransferlimitChangeRequestPayload payload = new TransferlimitChangeRequestPayload();
     payload.setRequest(message.getData());
+    payload.setTraceId(message.getTraceid());
 
     zeebe.newCreateInstanceCommand() //
             .bpmnProcessId("transfer-limit-change-request") //

@@ -19,7 +19,7 @@ public class RequestCompletedAdapter {
     messageSender.send( //
         new Message<io.flowing.retail.checkout.domain.Request>( //
             "TransferlimitAdjustedEvent", //
-                payload.getRequest().getRequestId(),
+                payload.getTraceId(),
                 payload.getRequest()));
   }
 
